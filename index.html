@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Bucket List</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+
+  <script src="firestore.js"></script>
+
+  <script defer src="scripts.js"></script>
+
+</head>
+
+<body>
+
+  <div id="heart-container"></div>
+
+  <!-- NAME SCREEN -->
+
+  <div id="name-screen" class="screen">
+
+    <div class="name-box">
+
+      <h1>make a list cos im forgetful</h1>
+
+      <p>how did i pull u tho💔</p>
+
+      <input
+        type="text"
+        id="nameInput"
+        placeholder="your name"
+      >
+
+      <button id="saveNameBtn">
+        press this if ur letting me hit
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- APP -->
+
+  <main id="app" style="display:none;">
+
+    <header>
+
+      <div>
+        <h1>we gotta do sm💔 </h1>
+        <p id="welcomeText"></p>
+      </div>
+
+    </header>
+
+    <!-- SORT -->
+
+    <div class="top-controls">
+
+      <select id="sortSelect">
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+      </select>
+
+    </div>
+
+    <!-- LIST -->
+
+    <div id="list"></div>
+
+    <!-- FLOATING BUTTON -->
+
+    <button id="openModalBtn" class="floating-btn">
+      +
+    </button>
+
+    <!-- MODAL -->
+
+    <div id="modalOverlay" class="modal-overlay hidden">
+
+      <div class="modal">
+
+        <div class="modal-header">
+
+          <h2>YESSS FINALLY SOMETHING NEW👅👅</h2>
+
+          <button id="closeModalBtn" class="close-btn">
+            ✕
+          </button>
+
+        </div>
+
+        <input
+          type="text"
+          id="titleInput"
+          placeholder="title"
+        >
+
+        <textarea
+          id="descriptionInput"
+          placeholder="description"
+        ></textarea>
+
+        <input
+          type="text"
+          id="idealDateInput"
+          placeholder="ideal time"
+        >
+
+        <input
+          type="file"
+          id="imageInput"
+          accept="image/*"
+        >
+
+        <button id="addBtn">
+          save item
+        </button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
